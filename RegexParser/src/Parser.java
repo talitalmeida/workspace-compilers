@@ -53,10 +53,6 @@ public class Parser implements IParser {
         }
     }
 
-    //---------------------
-    // Métodos da gramática
-    //---------------------
-
     // REGEX ::= CONCAT REGEX'
     public void regex() {
         concat();
@@ -88,12 +84,18 @@ public class Parser implements IParser {
         // else ε (vazio)
     }
 
-    // KLEENE ::= ATOM * | ATOM
+    // KLEENE ::= ATOM KLEENE'
     public void kleene() {
         atom();
+        kleeneLinha();
+    }
+
+    // KLEENE' ::= * | ε
+    public void kleeneLinha() {
         if (lookahead == '*') {
             match('*');
         }
+        // else ε
     }
 
     // ATOM ::= id | (REGEX)
@@ -109,9 +111,7 @@ public class Parser implements IParser {
         }
     }
 
-    //----------------------------
-    // Função auxiliar para id
-    //----------------------------
+    // regra do id
     private boolean isId(char c) {
         return c >= 'a' && c <= 'z';
     }
