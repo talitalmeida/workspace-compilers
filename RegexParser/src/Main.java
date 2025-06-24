@@ -1,37 +1,23 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         Parser parser = new Parser();
+        Scanner scanner = new Scanner(System.in);
 
-        String[] exemplosValidos = {
-            "a",
-            "a+b",
-            "(a+b)*",
-            "a(b+c)*d",
-            "(a)",
-            "a(b)"
-        };
+        System.out.println("Digite uma expressão regular (ou 'sair' para encerrar):");
 
-        String[] exemplosInvalidos = {
-            "a++b",
-            "a+*b",
-            "(a+b",
-            "a(b",
-            "a+",
-            "*a"
-        };
+        String input = "";
+        while (!input.equalsIgnoreCase("sair")) {
+            System.out.print("> ");
+            input = scanner.nextLine();
 
-        System.out.println("------ Testes válidos ------");
-        for (String ex : exemplosValidos) {
-            System.out.print("Testando: " + ex + " → ");
-            boolean result = parser.parse(ex);
-            System.out.println(result ? "✔ Aceito" : "❌ Rejeitado");
+            if (!input.equalsIgnoreCase("sair")) {
+                boolean result = parser.parse(input);
+                System.out.println(result ? "Aceito" : "Rejeitado");
+            }
         }
 
-        System.out.println("\n------ Testes inválidos ------");
-        for (String ex : exemplosInvalidos) {
-            System.out.print("Testando: " + ex + " → ");
-            boolean result = parser.parse(ex);
-            System.out.println(result ? "✔ Aceito (INCORRETO)" : "❌ Rejeitado (correto)");
-        }
+        scanner.close();
     }
 }
