@@ -2,7 +2,7 @@
 
 ## Descrição do Projeto
 
-A ideia desta atividade é desenvolver um parser simplificado a fim de consolidar os
+> A ideia desta atividade é desenvolver um parser simplificado a fim de consolidar os
 conceitos sobre análise sintática. A entrada desse parser é apenas uma linha de texto.
 
 O projeto foi desenvolvido em Java. A verificação de sintaxe é feita por um algoritmo de Análise Descendente Preditiva.
@@ -17,9 +17,10 @@ O código foi divido em 3 partes:
 
 1. Clone o repositório:
     ```bash
-    git clone https://github.com/seu-usuario/RegexParser.git
+    https://github.com/talitalmeida/workspace-compilers.git
     ```
 2. Instale as dependências (Java).
+3. Abra a pasta `RegexParser/`
 3. Execute no terminal, dando uma entrada com alguma expressão regular.
 
 ## Estrutura do Projeto
