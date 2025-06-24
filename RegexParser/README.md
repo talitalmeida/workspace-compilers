@@ -1,18 +1,21 @@
-## Getting Started
+# Analisador sintático simples
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Descrição do Projeto
 
-## Folder Structure
+A ideia desta atividade é desenvolver um parser simplificado a fim de consolidar os
+conceitos sobre análise sintática. A entrada desse parser é apenas uma linha de texto.
 
-The workspace contains two folders by default, where:
+O projeto foi desenvolvido em Java. A verificação de sintaxe é feita por um algoritmo de Análise Descendente Preditiva.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Como usar
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+1. Clone o repositório:
+    ```bash
+    git clone https://github.com/seu-usuario/RegexParser.git
+    ```
+2. Instale as dependências (Java).
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Estrutura do Projeto
 
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- `src/` — Código-fonte principal
+- `README.md` — Este arquivo
